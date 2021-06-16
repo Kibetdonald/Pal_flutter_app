@@ -1,6 +1,15 @@
 import 'package:flutter/material.dart';
 
 class Detailspage extends StatefulWidget {
+// <<<<<<< HEAD
+// =======
+  final String image;
+  final String name;
+  final double price;
+
+  Detailspage({required this.image, required this.name, required this.price});
+
+// >>>>>>> 3f4a18a9d981ebaae8d6b2b78708475eae3cc8a0
   @override
   State<Detailspage> createState() => _DetailspageState();
 }
@@ -60,7 +69,9 @@ class _DetailspageState extends State<Detailspage> {
                           decoration: BoxDecoration(
                             image: DecorationImage(
                               fit: BoxFit.fill,
+
                               image: AssetImage("images/gaming.jpeg"),
+                              // image: AssetImage(widget.image),
                             ),
                           ),
                         ),
@@ -147,6 +158,7 @@ class _DetailspageState extends State<Detailspage> {
                       Container(
                         width: 240,
                         child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             _buildColorBox(name: "S"),
                             _buildColorBox(name: "M"),
